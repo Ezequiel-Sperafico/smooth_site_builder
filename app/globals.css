@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  background-color: #3B3333;
+  color: white;
+}
+
+
+
+.bg-primary, .bg-primary-no-hover {
+  background-color: #fb2c36 ;
+}
+
+:hover.bg-primary, .hover-bg-primary {
+  background-color: #C74C52;
+}
+
+.bg-secondary, .bg-secondary-no-hover {
+  background-color: #5094BA;
+}
+
+:hover.bg-secondary, :hover.hover-bg-secondary, .bg-secondary-aux {
+  background-color: color-mix(in oklab, #2DB0FA 40%, transparent);
+}
+
+.bg-tertiary, .bg-tertiary-no-hover {
+  background-color: #BAB850; 
+}
+
+:hover.bg-tertiary, .hover-bg-tertiary {
+  background-color: #FAF52D;
+}
+
