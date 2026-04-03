@@ -1,4 +1,4 @@
-export function CarouselCard() {
+export function CarouselCard({title, image, subtitle, actions}: {title: string; image: string; subtitle: string; actions?: }) {
   return (
     <div className="w-6/10 bg-amber-400 rounded-2xl relative flex flex-col justify-end p-8">
       <img
