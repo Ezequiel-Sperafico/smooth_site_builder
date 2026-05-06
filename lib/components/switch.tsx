@@ -5,13 +5,17 @@ export function Switch<T extends string | number = string>({
   value,
   options,
   onChange,
+  className,
 }: {
   value: T;
   options: { value: T; icon: JSX.ElementType; title?: string }[];
   onChange: (newValue: T) => void;
+  className?: string;
 }) {
   return (
-    <div className="border-2 border-gray-800 rounded-lg h-6 flex">
+    <div
+      className={`border-2 border-gray-800 rounded-lg h-6 flex ${className}`}
+    >
       {options.map(({ icon: Icon, value: v, title }, index) => (
         <IconButton
           icon={Icon}
