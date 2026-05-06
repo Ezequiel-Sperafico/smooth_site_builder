@@ -3,6 +3,8 @@
 import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
 import { HTMLProps, JSX, ReactNode, useEffect, useState } from "react";
 import IconButton from "../iconButton";
+import { ICarStructure } from "./carousel.types";
+import { CarouselCard } from "./carouselCard";
 
 export function Carousel({ structure = [] }: { structure: ICarStructure[] }) {
   const lastPageIndex = structure.length - 1;
@@ -17,32 +19,24 @@ export function Carousel({ structure = [] }: { structure: ICarStructure[] }) {
   };
 
   return (
-    <div className="w-dvw h-150 bg-green-400 flex flex-col gap-2">
-      <div className="h-9/10 w-full flex justify-center gap-5">
-        <div className="w-3/10 h-full flex flex-col gap-2">
-          <div
-            className="w-full bg-amber-300  rounded-2xl relative flex items-end"
-            style={{ height: "calc(50% - 4px)" }}
-          >
-            <img
-              alt="sem imagem"
-              src={renderData.side[0].image}
-              className="top-0 left-0 w-full h-full absolute rounded-2xl"
-            />
-            <p className="relative">{renderData.side[0].title}</p>
-          </div>
-
-          <div
-            className="w-full bg-amber-700 rounded-2xl relative flex items-end"
-            style={{ height: "calc(50% - 4px)" }}
-          >
-            <img
-              alt="sem imagem"
-              src={renderData.side[1].image}
-              className="top-0 left-0 w-full h-full absolute rounded-2xl"
-            />
-            <p className="relative">{renderData.side[1].title}</p>
-          </div>
+    <div className="w-full h-full flex flex-col gap-2">
+      <div className="h-full w-full flex gap-5">
+        <CarouselCard
+          type="main"
+          title={renderData.main.title}
+          image={renderData.main.image}
+        />
+        <div className="w-4/10 h-full flex flex-col gap-2">
+          <CarouselCard
+            type="side"
+            title={renderData.side[0].title}
+            image={renderData.side[0].image}
+          />
+          <CarouselCard
+            type="side"
+            title={renderData.side[1].title}
+            image={renderData.side[1].image}
+          />
         </div>
       </div>
 

@@ -4,12 +4,10 @@ import { EllipsisVertical } from "lucide-react";
 import IconButton from "../iconButton";
 import Button from "../button";
 import DropdownList from "../dropdownList";
-import { menuOptions_mocked } from "@/lib/mocked/menuOptions.mocked";
 import SearchBar from "../search";
 import { useState } from "react";
-import Avatar from "../avatar";
-import { PROFILE_ROUTES } from "@/lib/consts/menuProfileRoutes.const";
 import { useRouter } from "next/navigation";
+import Avatar from "../avatar";
 
 export default function Menu() {
   const router = useRouter();
@@ -21,7 +19,7 @@ export default function Menu() {
   return (
     <div
       id="main-menu"
-      className="fixed flex justify-between items-center w-dvw bg-red-500/30 backdrop-blur-md py-2 px-4 z-1"
+      className="fixed flex justify-between items-center w-full bg-red-500/30 backdrop-blur-md py-2 px-4 z-1"
     >
       <div>
         <IconButton
@@ -33,7 +31,7 @@ export default function Menu() {
         />
         {isRouterMenuOpen && (
           <DropdownList
-            list={menuOptions_mocked}
+            list={[]}
             onClose={() => {
               setIsRouterMenuOpen(false);
             }}
@@ -62,11 +60,7 @@ export default function Menu() {
         )}
         {isProfileMenuOpen && (
           <DropdownList
-            list={PROFILE_ROUTES.map(({ label, route }, index) => ({
-              id: index,
-              label,
-              onClick: () => router.push(route),
-            }))}
+            list={[]}
             outerStyles={{ right: "16px" }}
             onClose={() => {
               setIsProfileMenuOpen(false);

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Menu } from "@/lib/components/menu";
 
 export const metadata: Metadata = {
   title: "Round Shop",
@@ -14,12 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <div id="main-app" className="w-dvw h-dvh">
-          <Menu />
-          {children}
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

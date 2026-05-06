@@ -1,19 +1,29 @@
-'use client'
-
 import { JSX } from "react";
 
-interface IIconButtonProps {
-    icon: JSX.ElementType;
-    onclick: () => void;
-    forceHover?: boolean;
-    size?: "small" | "medium" | "large";
-}
-
-export default function IconButton({icon: Icon, size = "medium", onclick, forceHover = false}: IIconButtonProps) {
-    const sizeClass = size === "small" ? "w-2 h-2" : size === "medium" ? "w-4 h-4" : "w-6 h-6"
-    return (
-        <button className={`hover-bg-secondary rounded-4xl p-1.5 ${forceHover ? 'bg-secondary-aux' : ''}`} onClick={onclick}>
-            <Icon className={sizeClass} />
-        </button>
-    );
+export function IconButton({
+  icon: Icon,
+  onClick,
+  size = "md",
+  outerClass = "",
+  innerClass = "",
+  title,
+}: {
+  icon: JSX.ElementType;
+  onClick: () => void;
+  size?: "sm" | "md" | "lg";
+  title?: string;
+  outerClass?: React.ComponentProps<"button">["className"];
+  innerClass?: React.ComponentProps<"img">["className"];
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`cursor-pointer ${size === "sm" ? "w-5 h-5" : size === "md" ? "w-7 h-7" : "w-9 h-9"} ${outerClass}`}
+      title={title}
+    >
+      <Icon
+        className={`${size === "sm" ? "w-4" : size === "md" ? "w-6" : "w-8"} ${innerClass}`}
+      />
+    </button>
+  );
 }

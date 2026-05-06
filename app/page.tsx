@@ -1,34 +1,5 @@
-import { Carousel } from "@/lib/components/carousel/carousel";
+import { App } from "@/lib/app/app";
 
-export default function Home() {
-  return (
-    <div className="pt-13">
-      <Carousel
-        structure={[
-          {
-            main: {
-              title: "teste",
-              subtitle: "testadoooooooo",
-              image: "https://i.imgur.com/MhPyPJ6.jpeg",
-            },
-            side: [
-              { title: "teste", image: "https://i.imgur.com/MhPyPJ6.jpeg" },
-              { title: "teste", image: "https://i.imgur.com/MhPyPJ6.jpeg" },
-            ],
-          },
-          {
-            main: {
-              title: "teste 2",
-              subtitle: "testadoooooooo",
-              image: "https://i.imgur.com/MhPyPJ6.jpeg",
-            },
-            side: [
-              { title: "teste", image: "https://i.imgur.com/MhPyPJ6.jpeg" },
-              { title: "teste", image: "https://i.imgur.com/MhPyPJ6.jpeg" },
-            ],
-          },
-        ]}
-      />
-    </div>
-  );
+export default function HomePage() {
+  return <App />;
 }
