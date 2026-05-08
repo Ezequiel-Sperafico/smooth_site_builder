@@ -7,16 +7,14 @@ export function App() {
     <div className="w-full h-full">
       <SideBar />
       <TopBar />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
-      <DragWindow />
+      <DragWindow
+        open
+        title="Teste"
+        onClose={async () => {
+          "use server";
+        }}
+        layer={1}
+      />
     </div>
   );
 }
