@@ -1,7 +1,25 @@
+import React from "react";
+
 interface IGridProps {
   children: React.ReactNode[];
-  width: number | "auto";
-  height: number | "auto";
+  width?: number | "auto";
+  height?: number | "auto";
+}
+
+export function GridItem({
+  children,
+  key,
+  width,
+}: {
+  children: React.ReactNode;
+  width: React.CSSProperties["width"];
+  key: string;
+}) {
+  return (
+    <div key={key} style={{ width }}>
+      {children}
+    </div>
+  );
 }
 
 export function Grid({
@@ -15,8 +33,11 @@ export function Grid({
         width: width !== "auto" ? `${width}px` : width,
         height: height !== "auto" ? `${height}px` : height,
       }}
+      className="flex flex-wrap justify-between"
     >
-      {...children}
+      {children.map((ch, i) => (
+        <GridItem key={i.toString()}>{ch}</GridItem>
+      ))}
     </div>
   );
 }

@@ -6,7 +6,7 @@ export function findMissingNumberFromArray(arr: number[]) {
   if (length === 0) return 1;
 
   for (let i = 1; i < higherN; i++) {
-    if (orderedArr.some((n) => n === i)) return i;
+    if (orderedArr.some((n) => n !== i)) return i;
   }
 
   return higherN + 1;

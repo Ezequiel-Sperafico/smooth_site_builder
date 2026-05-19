@@ -1,4 +1,4 @@
-import { EventExecutionQueueContext } from "../contexts/eventQueue";
+import { EventExecutionQueueContext } from "../contexts/eventListenerBus";
 import { SideBar } from "./menu/sideBar";
 import { TopBar } from "./menu/topBar";
 import { ElementWindow } from "./windows/elementWindow";
@@ -9,6 +9,11 @@ export function App() {
       <EventExecutionQueueContext>
         <SideBar />
         <TopBar />
+        <ElementWindow
+          onClose={async () => {
+            "use server";
+          }}
+        />
         <ElementWindow
           onClose={async () => {
             "use server";

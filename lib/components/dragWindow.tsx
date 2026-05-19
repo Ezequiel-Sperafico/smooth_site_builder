@@ -9,7 +9,7 @@ import React, {
   MouseEvent as ReactMouseEvent,
   useContext,
 } from "react";
-import { EventContext } from "../contexts/eventQueue";
+import { EventContext } from "../contexts/eventListenerBus";
 
 function HeaderButton({
   onClick,
