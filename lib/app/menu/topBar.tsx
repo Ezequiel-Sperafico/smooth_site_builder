@@ -20,12 +20,12 @@ export function TopBar() {
       open={open}
       border
     >
-      <div className="h-full pl-11 flex items-center justify-between">
+      <div className="h-full pl-9 flex items-center justify-between">
         <div className="flex h-full items-center">
           <IconButton
             icon={Undo2}
             onClick={() => {}}
-            outerClass="text-gray-800 p-0.5 rounded-full hover:bg-gray-800 hover:text-gray-200"
+            outerClass="text-gray-800 rounded-full hover:bg-gray-800 hover:text-gray-200"
             title="Undo"
           />
           <IconButton

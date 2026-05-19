@@ -18,11 +18,11 @@ export function IconButton({
   return (
     <button
       onClick={onClick}
-      className={`cursor-pointer ${size === "sm" ? "w-5 h-5" : size === "md" ? "w-7 h-7" : "w-9 h-9"} ${outerClass}`}
+      className={`cursor-pointer ${size === "sm" ? "p-0.5" : size === "md" ? "p-0.5" : "p-1"} ${outerClass}`}
       title={title}
     >
       <Icon
-        className={`${size === "sm" ? "w-4" : size === "md" ? "w-6" : "w-8"} ${innerClass}`}
+        className={`${size === "sm" ? "h-3" : size === "md" ? "h-5" : "h-6"} ${innerClass}`}
       />
     </button>
   );

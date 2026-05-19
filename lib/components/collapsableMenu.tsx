@@ -4,7 +4,7 @@ import {
   ChevronRight,
   ChevronUp,
 } from "lucide-react";
-import { HTMLAttributes, JSX } from "react";
+import { JSX } from "react";
 import { IconButton } from "./iconButton";
 
 export interface ICollapsableMenuProps {
@@ -33,27 +33,27 @@ export function CollapsableMenu({
     axis === "top"
       ? {
           bar: `top-0 w-dvw h-9 ${border ? "border-b border-b-gray-800" : ""}`,
-          button: "top-0 right-0 rounded-b-xl mx-2",
+          button: "top-0 right-0 mx-5 w-8 rounded-b-xl mx-2",
           iconClose: ChevronDown,
           iconOpen: ChevronUp,
         }
       : axis === "left"
         ? {
             bar: `left-0 h-dvh w-9 flex-col ${border ? "border-r border-r-gray-800" : ""}`,
-            button: "left-0 bottom-0 rounded-r-xl my-2",
+            button: "left-0 bottom-0 h-8 my-5 rounded-r-xl",
             iconClose: ChevronRight,
             iconOpen: ChevronLeft,
           }
         : axis === "bottom"
           ? {
               bar: `bottom-0 w-dvw h-9 ${border ? "border-t border-t-gray-800" : ""}`,
-              button: "bottom-0 right-0 rounded-t-xl mx-2",
+              button: "bottom-0 right-5 w-8 mx-5 rounded-t-xl mx-2",
               iconClose: ChevronUp,
               iconOpen: ChevronDown,
             }
           : {
               bar: `right-0 h-dvh w-9 flex-col ${border ? "border-l border-l-gray-800" : ""}`,
-              button: "right-0 bottom-0 rounded-l-xl my-2",
+              button: "right-0 bottom-0 h-8 my-5 rounded-l-xl",
               iconClose: ChevronLeft,
               iconOpen: ChevronRight,
             };
@@ -65,23 +65,27 @@ export function CollapsableMenu({
       <div className="w-full h-full">
         {...Array.isArray(children) ? children : [children]}
       </div>
-      <div>
+      <div
+        className={`flex items-center justify-center ${classPosition.button}`}
+      >
         <IconButton
           onClick={onClose}
-          outerClass={classPosition.button}
           innerClass="text-gray-800"
           icon={classPosition.iconOpen}
-          size="lg"
+          size="md"
         />
       </div>
     </div>
   ) : (
-    <IconButton
-      onClick={onOpen}
-      outerClass={`bg-gray-200 border-gray-300 flex justify-center items-center fixed ${classPosition.button}`}
-      innerClass="text-gray-800"
-      icon={classPosition.iconClose}
-      size="lg"
-    />
+    <div
+      className={`fixed h-8 w-8 bg-gray-200 border-gray-300 flex justify-center items-center ${classPosition.button}`}
+    >
+      <IconButton
+        onClick={onOpen}
+        innerClass="text-gray-800"
+        icon={classPosition.iconClose}
+        size="md"
+      />
+    </div>
   );
 }

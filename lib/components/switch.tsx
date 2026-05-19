@@ -14,7 +14,7 @@ export function Switch<T extends string | number = string>({
 }) {
   return (
     <div
-      className={`border-2 border-gray-800 rounded-lg h-6 flex ${className}`}
+      className={`border-2 justify-center items-center border-gray-800 rounded-lg h-5 flex ${className}`}
     >
       {options.map(({ icon: Icon, value: v, title }, index) => (
         <IconButton
@@ -23,7 +23,7 @@ export function Switch<T extends string | number = string>({
           title={title}
           key={v}
           size="sm"
-          outerClass={`border-none p-0 m-0 h-full flex justify-center items-center w-7.5 hover:bg-gray-800 hover:text-gray-200 ${index === 0 ? "rounded-l-md" : ""} ${options.length - 1 === index ? "rounded-r-md" : ""}  ${v === value ? "bg-gray-800 text-gray-200" : "text-gray-800"}`}
+          outerClass={`border-none justify-center items-center p-0 m-0 h-full flex w-7.5 hover:bg-gray-800 hover:text-gray-200 ${index === 0 ? "rounded-l-md" : ""} ${options.length - 1 === index ? "rounded-r-md" : ""}  ${v === value ? "bg-gray-800 text-gray-200" : "text-gray-800"}`}
         />
       ))}
     </div>

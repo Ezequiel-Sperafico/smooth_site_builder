@@ -10,7 +10,7 @@ export function Button({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-px text-sm rounded-lg cursor-pointer bg-gray-800 border-2 border-gray-800 text-gray-200 hover:text-gray-800 hover:bg-gray-200 active:bg-gray-800 active:text-gray-200 ${className}`}
+      className={`px-3 py-1 text-[12px] rounded-lg cursor-pointer bg-gray-800 border-2 border-gray-800 text-gray-200 hover:text-gray-800 hover:bg-gray-200 active:bg-gray-800 active:text-gray-200 ${className}`}
     >
       {children}
     </button>

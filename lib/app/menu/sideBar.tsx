@@ -52,7 +52,7 @@ export function SideBar() {
         {menuOptions.map(({ label, icon, onClick }, index) => (
           <IconButton
             key={index}
-            outerClass="p-0.5 text-gray-800 hover:bg-gray-800 hover:text-gray-200 rounded"
+            outerClass="text-gray-800 p-0.5 hover:bg-gray-800 hover:text-gray-200 rounded"
             icon={icon}
             onClick={onClick}
             title={label}
