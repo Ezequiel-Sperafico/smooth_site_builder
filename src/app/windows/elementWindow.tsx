@@ -1,5 +1,5 @@
-import { DragWindow } from "@/lib/components/dragWindow";
-import { Grid } from "@/lib/components/grid";
+import { DragWindow } from "@/src/components/dragWindow";
+import { Grid } from "@/src/components/grid";
 
 export function ElementWindow({ onClose }: { onClose: () => void }) {
   return (

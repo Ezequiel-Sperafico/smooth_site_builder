@@ -1,6 +1,6 @@
 "use client";
-import { CollapsableMenu } from "@/lib/components/collapsableMenu";
-import { IconButton } from "@/lib/components/iconButton";
+import { CollapsableMenu } from "@/src/components/collapsableMenu";
+import { IconButton } from "@/src/components/iconButton";
 import {
   LayoutTemplate,
   PanelTop,

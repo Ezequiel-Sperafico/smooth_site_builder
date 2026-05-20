@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/lib/components/button";
-import { CollapsableMenu } from "@/lib/components/collapsableMenu";
-import { IconButton } from "@/lib/components/iconButton";
-import { Switch } from "@/lib/components/switch";
+import { Button } from "@/src/components/button";
+import { CollapsableMenu } from "@/src/components/collapsableMenu";
+import { IconButton } from "@/src/components/iconButton";
+import { Switch } from "@/src/components/switch";
 import { Monitor, Redo2, Smartphone, Undo2 } from "lucide-react";
 import { useState } from "react";
 

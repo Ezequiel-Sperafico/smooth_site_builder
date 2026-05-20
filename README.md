@@ -59,25 +59,24 @@ Now, if the server is running, you will be able to open the app through http://l
 
 ```
 smooth_site_builder
-├── app
+├── app                     # app folder and root route for app; since this is a SPA, it only have layout and page
 │   ├── global.css
 │   ├── layout.tsx
 │   └── page.tsx
-├── lib
-│   ├── app
-│   │   ├── builder
+├── src                                       # source folder for the app structure
+│   ├── app                                   # contain app inner layer and outer layer structure
+│   │   ├── builder                           # inner layer folder
 │   │   ├── ...
-│   │   └── app.tsx
-│   ├── components
-│   │   ├── button.tsx
+│   │   └── app.tsx                           # main app component
+│   ├── components                            # components used to build the app outer layer
+│   │   ├── button.tsx                        # component example
 │   │   └── ...
-│   ├── contexts
-│   │   ├── eventListenerBus.tsx
+│   ├── contexts                              # contexts for the application (maybe will drop in the future)
+│   │   ├── eventListenerBus.tsx              # context example
 │   │   └── ...
 │   └── utils
 │       ├── findMissingNumberFromArray.ts
 │       └── ...
 ├── package.json
-│
 └── tsconfig.json
 ```

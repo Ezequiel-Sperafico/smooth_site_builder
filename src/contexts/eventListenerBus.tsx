@@ -1,7 +1,7 @@
 "use client";
 
 import { Context, createContext, useCallback, useEffect, useRef } from "react";
-import { findMissingNumberFromArray } from "../app/utils/findMissingNumberFromArray";
+import { findMissingNumberFromArray } from "../utils/findMissingNumberFromArray";
 
 type TEvent = (event: MouseEvent) => void;
 type TEventWrapper = { id: number; event: TEvent };
