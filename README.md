@@ -8,11 +8,11 @@ It is structured in an outer layer that contains and manage the main
 tools and functionality - almost all related to the inner layer,
 the builder module that contains the actual site object and logic to render it for the user.
 
-**In the future, this app will integrate a bigger ecosystem to manage other parts of a website**  
+*In the future, this app will integrate a bigger ecosystem to manage other parts of a website*
 
 ***This is a work in progress***
 
-> Expect future prints...
+***Expect future prints***
 
 ## Usage
 
@@ -28,7 +28,6 @@ Next, run one of the commands, depending on which package manager you are using:
 ```console
 pnpm install
 ```
-or
 
 ```console
 npm install
@@ -42,8 +41,7 @@ When all packages are set, run this for launching a dev server:
 
 ```console
 pnpm run dev
-```
-or
+```  
 
 ```console
 npm run dev
