@@ -2,7 +2,7 @@
 
 ## What is
 
-smooth_site_builder is an web app build in React, with NextJS.
+smooth_site_builder is a web app built with React and Next.js.
 The app is a site builder, like the repo name says...  
 It is structured in an outer layer that contains and manage the main
 tools and functionality - almost all related to the inner layer,
@@ -18,12 +18,12 @@ the builder module that contains the actual site object and logic to render it f
 
 ### Dependencies
 
-Firstly, install [Node.js](https://nodejs.org/en/download), preferably with [pnpm](https://pnpm.io/pt/installation), but not exclusevily.  
+First, install [Node.js](https://nodejs.org/en/download), preferably with [pnpm](https://pnpm.io/pt/installation), but not exclusevily.  
 
 ### Running
 
-Clone this repo, open your bash and navigate to the app folder.
-After, run one of the commands, depending on which package manager you installed with node:  
+Clone this repository, open your terminal and navigate to the project folder.
+Next, run one of the commands, depending on which package manager you are using:  
 
 ```console
 pnpm install
@@ -57,7 +57,7 @@ Now, if the server is running, you will be able to open the app through http://l
 
 ## Project Folder Structure
 
-**NextJS boilerplate and other personal dev dependencies configuration will be ignored**
+**Note: NextJS boilerplate and other personal dev dependency configurations will be ommited for clarity.**
 
 ```
 smooth_site_builder
