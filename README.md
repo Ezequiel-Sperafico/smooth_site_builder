@@ -5,8 +5,8 @@
 smooth_site_builder is a web app built with React and Next.js.
 The app is a site builder, like the repo name says...  
 It is structured in an outer layer that contains and manage the main
-tools and functionality - almost all related to the inner layer,
-the builder module that contains the actual site object and logic to render it for the user.
+tools and functionality, and the inner layer, the builder module that contains the actual site object and logic
+to render it for the user.
 
 *In the future, this app will integrate a bigger ecosystem to manage other parts of a website*
 
@@ -59,7 +59,7 @@ Now, if the server is running, you will be able to open the app through http://l
 
 ```
 smooth_site_builder
-├── app                     # app folder and root route for app; since this is a SPA, it only have layout and page
+├── app                                      # root route for app; since this is a SPA, it only have layout and page
 │   ├── global.css
 │   ├── layout.tsx
 │   └── page.tsx
