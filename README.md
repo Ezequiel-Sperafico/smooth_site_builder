@@ -59,7 +59,7 @@ Now, if the server is running, you will be able to open the app through http://l
 
 ```
 smooth_site_builder
-├── app                                      # root route for app; since this is a SPA, it only have layout and page
+├── app                                       # root route for app; since this is a SPA, it only have layout and page
 │   ├── global.css
 │   ├── layout.tsx
 │   └── page.tsx
