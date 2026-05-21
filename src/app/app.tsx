@@ -1,7 +1,7 @@
 import { EventExecutionQueueContext } from "../contexts/eventListenerBus";
-import { SideBar } from "./menu/sideBar";
-import { TopBar } from "./menu/topBar";
-import { ElementWindow } from "./windows/elementWindow";
+import { SideBar } from "./outerLayer/menu/sideBar";
+import { TopBar } from "./outerLayer/menu/topBar";
+import { ElementWindow } from "./outerLayer/windows/elementWindow";
 
 export function App() {
   return (
