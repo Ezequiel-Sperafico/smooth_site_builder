@@ -1,19 +1,8 @@
 "use client";
 
 import dayjs from "dayjs";
-import { Clock, LucideProps, Monitor } from "lucide-react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
-import {
-  DetailedHTMLProps,
-  DOMAttributes,
-  ForwardRefExoticComponent,
-  HTMLAttributes,
-  ImgHTMLAttributes,
-  RefAttributes,
-  useEffect,
-  useState,
-} from "react";
+import { Clock } from "lucide-react";
+import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from "react";
 
 export interface ITimerProps extends DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,

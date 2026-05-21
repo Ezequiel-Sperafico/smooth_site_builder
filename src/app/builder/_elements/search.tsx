@@ -5,7 +5,7 @@ import { useState } from "react";
 import DropdownList from "./dropdownList";
 
 export default function SearchBar() {
-  const [searchOption, setSearchOption] = useState(1);
+  // const [searchOption, setSearchOption] = useState(1);
   const [isSearchOptionsOpen, setSearchOptionsOpen] = useState(false);
 
   return (
@@ -36,7 +36,9 @@ export default function SearchBar() {
           list={[].map(({ id, label }) => ({
             id,
             label,
-            onClick: () => setSearchOption(id),
+            onClick: () => {
+              /*setSearchOption(id)*/
+            },
           }))}
         />
       )}

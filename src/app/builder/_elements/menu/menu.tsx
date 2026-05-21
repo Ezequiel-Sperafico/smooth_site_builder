@@ -6,12 +6,9 @@ import Button from "../button";
 import DropdownList from "../dropdownList";
 import SearchBar from "../search";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Avatar from "../avatar";
 
 export default function Menu() {
-  const router = useRouter();
-
   const [isRouterMenuOpen, setIsRouterMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
